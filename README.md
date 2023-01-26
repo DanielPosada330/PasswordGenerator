@@ -114,18 +114,21 @@ Code used:
 ![image](https://user-images.githubusercontent.com/104124602/214954619-a818b9b3-b736-4051-8f40-f934e492f35a.png)
 
 Error received:
+
 ![image](https://user-images.githubusercontent.com/104124602/214954753-67adc24e-9a01-4f49-818f-eeae8064987b.png)
 
 To combat this, I utilized a try and except statement to catch the error. I didn’t want to simply have it print out something to the user, but I also wanted to print out which error it was and why it failed. For that I coded the try and except statement as follows:
 ![image](https://user-images.githubusercontent.com/104124602/214954811-ee63c4e9-31a3-4da8-9cfa-734bb26a6c75.png)
 
 That way if the user did repeat that error, the console would print out what caused the error, and a prompt to the user asking them to enter ‘yes’ or ‘no’:
+
 ![image](https://user-images.githubusercontent.com/104124602/214954931-320b4719-2362-4eab-85d9-739e1cdb878c.png)
 
 Another error that I came around was one that was user error, but an understandable mistake. When asking for the use to type in ‘yes’ or ‘no’, if the user typed in “Yes” or “NO” or some combination of upper and lower case characters, I would receive an error. Below was the original code:
 ![image](https://user-images.githubusercontent.com/104124602/214954983-bdb0a9eb-eb9f-490a-816e-e163e5303775.png)
 
 And below was the console’s output:
+
 ![image](https://user-images.githubusercontent.com/104124602/214955031-86edf99b-c437-4d7d-9fc7-11b585d365ea.png)
 
 So what I did to combat this was to add a .lower() method to the user’s input, in which case when my conditional statements were set to either == ‘yes’ or == ‘no’ the user’s input would automatically be made into all lowercase, thus matching what I programmed into the conditional statements.
