@@ -15,61 +15,61 @@ would pair up with. Although the program works as intended, there is room for im
 ## Pseudocode Template
 Below was the pseudocode template I used broadly to write the program:
 
-This program generates a unique password for the user, and allows them the option
+	This program generates a unique password for the user, and allows them the option
 
-to save it to a text file, or to generate a new password should they not like
+	to save it to a text file, or to generate a new password should they not like
 
-their originally generated password.
+	their originally generated password.
 
-This program will initially start with NO text file created.
+	This program will initially start with NO text file created.
 
-Function yesOrNo():
-   PRINT “please enter ‘yes’ or ‘no’.”
+	Function yesOrNo():
+  	 PRINT “please enter ‘yes’ or ‘no’.”
 
-Random Character variable that stores character options for password generator.
+	Random Character variable that stores character options for password generator.
 
-PRINT Welcoming Statement
+	PRINT Welcoming Statement
 
-Main Program Loop variable whether to stay in loop or exit and terminate program.
-Main Program While Loop
-	First Question WHILE Loop
-		Receive input of desired password length
-		Receive input of confirmation of password length
-		IF password length is correct
-			Continue through program
-		ELSE IF password length is not correct
-			Repeat the First Question While Loop
-		ELSE
-			function yesOrNo()
+	Main Program Loop variable whether to stay in loop or exit and terminate program.
+	Main Program While Loop
+		First Question WHILE Loop
+			Receive input of desired password length
+			Receive input of confirmation of password length
+			IF password length is correct
+				Continue through program
+			ELSE IF password length is not correct
+				Repeat the First Question While Loop
+			ELSE
+				function yesOrNo()
 
-	Generated password variable initially set to blank
-	FOR every digit index IN range of desired password length
-		Add the randomly chosen character to the variable holding the generated password
-	PRINT the generated password variable
+		Generated password variable initially set to blank
+		FOR every digit index IN range of desired password length
+			Add the randomly chosen character to the variable holding the generated password
+		PRINT the generated password variable
 		
-	Text file creation WHILE Loop
-		Receive input if the user would like to save their generated password to a text file.
+		Text file creation WHILE Loop
+			Receive input if the user would like to save their generated password to a text file.
+			IF response is ‘yes’
+				Create text file
+				Save generated password to text file
+				Save text file
+				PRINT Password saved to ‘password.txt’.
+			ELSE IF response is no
+				BREAK out of WHILE loop
+
+			ELSE
+				Function yesOrNo()
+
+		PRINT New password statement yes or no.
+
+		Receive input of if the user wants a new password or not.
 		IF response is ‘yes’
-			Create text file
-			Save generated password to text file
-			Save text file
-			PRINT Password saved to ‘password.txt’.
-		ELSE IF response is no
-			BREAK out of WHILE loop
-
-		ELSE
+			CONTINUE and begin the process anew
+		ELSE IF response is ‘no’
+			PRINT closing statement
+			Changes Main Program Loop variable to exit the loop and program
+		ELSE:
 			Function yesOrNo()
-
-	PRINT New password statement yes or no.
-
-	Receive input of if the user wants a new password or not.
-	IF response is ‘yes’
-		CONTINUE and begin the process anew
-	ELSE IF response is ‘no’
-		PRINT closing statement
-		Changes Main Program Loop variable to exit the loop and program
-	ELSE:
-		Function yesOrNo()
 		
 ## Test Scenarios
 Below are some example scenarios that could come about during the program:
