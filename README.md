@@ -107,7 +107,7 @@ Scenario 3: User chooses a password length of “20”, wants a text file, but d
 10.	The user decides to use the second password generated.
 11.	The program reminds the user of safe password usage, and successfully terminates.
 
-##Debugging Issues
+## Debugging Issues
 The main issue that I ran into constantly was when asking for input. If the user entered anything but my desired inputs of ‘yes’ or ‘no’ I would run into a ValueError as shown below:
 
 Code used:
